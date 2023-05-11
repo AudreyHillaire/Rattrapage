@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Question aléatoire</title>
+  </head>
+  <body>
+    <h1>Question sur {{ sujet }}</h1>
+    <p>{{ question }}</p>
+    <form method="POST" action="/verifier">
+      <input type="hidden" name="sujet" value="{{ sujet }}">
+      <label for="reponse">Votre réponse :</label>
+      <input type="text" id="reponse" name="reponse" required>
+      <button type="submit">Évaluer la réponse</button>
+    </form>
+    <form method="GET" action="/">
+      <button type="submit">Question aléatoire</button>
+    </form>
+  </body>
+</html>
+
